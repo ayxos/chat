@@ -2,3 +2,4 @@ node_modules/
 config/secretDatabase.js
 config/secretAuth.js
 config/auth.js
+style.css
