@@ -1,0 +1,99 @@
+extends layout
+
+block content
+	.container
+		.page-header.text-center
+			h1
+				span.fa.fa-anchor
+				| Profile Page
+			a.btn.btn-default.btn-sm(href='/logout') Logout
+
+		.row
+			.col-sm-6
+				.well
+					h3
+						span.fa.fa-user Local
+
+					if user.local.email
+						p
+							br
+							strong id:
+							| #{user._id}
+							br
+							strong email:
+							| #{user.local.email}
+							br
+							strong password:
+							| #{user.local.password}
+						a.btn.btn-default(href='/unlink/local') Unlink
+					else
+						a.btn.btn-default(href='/connect/local') Connect Local
+
+			.col-sm-6
+				.well
+					h3.text-primary.fb
+						span(class='fa fa-facebook') facebook
+
+					if user.facebook.token
+						p
+							br
+							strong id:
+							| #{user.facebook.id}
+							br
+							strong token:
+							| #{user.facebook.token}
+							br
+							strong email:
+							| #{user.facebook.email}
+							br
+							strong username:
+							| #{user.facebook.name}
+						a.btn.btn-default(href='/unlink/facebook') Unlink facebook
+					else
+						a.btn.btn-default(href='/connect/facebook') Connect facebook
+
+			.col-sm-6
+				.well
+					h3.text-primary.tw
+						span(class='fa fa-twitter') twitter
+
+					if user.twitter.token
+						p
+							br
+							strong id:
+							| #{user.twitter.id}
+							br
+							strong token:
+							| #{user.twitter.token}
+							br
+							strong name:
+							| #{user.twitter.displayName}
+							br
+							strong username:
+							| #{user.twitter.username}
+						a.btn.btn-default(href='/unlink/twitter') Unlink twitter
+					else
+						a.btn.btn-default(href='/connect/twitter') Connect twitter
+
+			.col-sm-6
+				.well
+					h3.text-primary.gp
+						span(class='fa fa-google-plus') google
+
+					if user.google.token
+						p
+							br
+							strong id:
+							| #{user.google.id}
+							br
+							strong token:
+							| #{user.google.token}
+							br
+							strong email/name:
+							| #{user.google.email}
+							br
+							strong username:
+							| #{user.google.name}
+						a.btn.btn-default(href='/unlink/google') Unlink google
+					else
+						a.btn.btn-default(href='/connect/google') Connect google
