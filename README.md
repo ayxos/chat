@@ -1,5 +1,7 @@
 # Easy Node Authentication
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ayxos/chat.svg)](https://greenkeeper.io/)
+
 Code for the entire scotch.io tutorial series: Complete Guide to Node Authentication
 
 We will be using Passport to authenticate users locally, with Facebook, Twitter, and Google.
